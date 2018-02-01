@@ -159,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
             mLoadingIndicator.setVisibility(View.INVISIBLE);
             if (weatherData != null) {
                 showWeatherDataView();
-                if (mForecastAdapter == null) mForecastAdapter = new ForecastAdapter();
                 mForecastAdapter.setWeatherData(weatherData);
             } else {
                 showErrorMessage();
@@ -183,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.action_refresh) {
             //Instead of setting the text to "", set the adapter to null before refreshing
-            mForecastAdapter = null;
+            mForecastAdapter.setWeatherData(null);
             loadWeatherData();
             return true;
         }
