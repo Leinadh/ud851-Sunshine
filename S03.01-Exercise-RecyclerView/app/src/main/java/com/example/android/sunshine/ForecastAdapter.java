@@ -15,8 +15,6 @@ import java.util.List;
 
 public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapterViewHolder>{
 
-    // TODO (47) Create the default constructor (we will pass in parameters in a later lesson)
-
     private String[] mWeatherData;
 
     public ForecastAdapter() {
